@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>UV-mapping-tool</title>
+
+   <!-- font -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+   <!-- Custom Styles -->
+   <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+   <div id="app">
+
+      <input type="file" id="input-file" hidden>
+
+      <p id="title">UV-mapping-tool</p>
+
+
+      <div id="container-buttons">
+         <button class="buttons" id="import-button">Import (OBJ)</button>
+         <button class="buttons" id="export-button" disabled>Export</button>
+      </div>
+
+      <p id="file-name"></p>
+
+      <div id="container-view">
+         <div id="texture-view">
+            No UV texture
+         </div>
+      </div>
+
+      <div id="load-progress" hidden>
+         <div></div>
+      </div>
+
+
+      <a id="by" href="https://github.com/JenByte32/uv-mapping-tool/tree/main">About</a>
+
+   </div>
+
+
+   <!-- Project -->
+   <script type="importmap">
+      {
+         "imports":{
+            "three":"https://cdn.jsdelivr.net/npm/three@0.166.0/build/three.module.min.js"
+         }
+      }
+   </script>
+
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+   <script type="module" src="main.js"></script>
+</body>
+
+</html>
