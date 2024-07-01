@@ -3,7 +3,7 @@ import * as BufferGeometryUtils from "https://cdn.jsdelivr.net/npm/three@0.166.0
 import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.166.0/examples/jsm/loaders/OBJLoader.js"
 import { OBJExporter } from "https://cdn.jsdelivr.net/npm/three@0.166.0/examples/jsm/exporters/OBJExporter.js"
 import { UVUnwrapper } from "https://cdn.jsdelivr.net/npm/xatlas-three@0.2.0/public/build/index.min.js"
-import { UVsDebug } from "https://cdn.jsdelivr.net/npm/three@0.166.0/examples/jsm/utils/UVsDebug.js"
+import { UVsDebug } from "./libs/three/UVsDebug.js"
 
 
 
@@ -93,7 +93,7 @@ async function mapUV() {
    const unwrapper = new UVUnwrapper({ BufferAttribute: THREE.BufferAttribute });
 
    await unwrapper.loadLibrary(
-      (mode, progress) => { console.log(mode, progress); },
+      (mode, progress) => {/* console.log(mode, progress); */},
       'https://cdn.jsdelivr.net/npm/xatlasjs@0.1.0/dist/xatlas.wasm',
       'https://cdn.jsdelivr.net/npm/xatlasjs@0.1.0/dist/xatlas.js',
    ); // Make sure to wait for the library to load before unwrapping.

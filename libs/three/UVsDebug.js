@@ -123,13 +123,13 @@ function UVsDebug( geometry, size = 1024 ) {
 
 		ctx.font = '18px Arial';
 		ctx.fillStyle = 'rgb( 63, 63, 63 )';
-		ctx.fillText( index, a.x * width, ( 1 - a.y ) * height );
+		//ctx.fillText( index, a.x * width, ( 1 - a.y ) * height );
 
 		if ( a.x > 0.95 ) {
 
 			// wrap x // 0.95 is arbitrary
 
-			ctx.fillText( index, ( a.x % 1 ) * width, ( 1 - a.y ) * height );
+			//ctx.fillText( index, ( a.x % 1 ) * width, ( 1 - a.y ) * height );
 
 		}
 
@@ -146,13 +146,13 @@ function UVsDebug( geometry, size = 1024 ) {
 			b.addVectors( a, uv ).divideScalar( 2 );
 
 			const vnum = face[ j ];
-			ctx.fillText( abc[ j ] + vnum, b.x * width, ( 1 - b.y ) * height );
+			//ctx.fillText( abc[ j ] + vnum, b.x * width, ( 1 - b.y ) * height );
 
 			if ( b.x > 0.95 ) {
 
 				// wrap x
 
-				ctx.fillText( abc[ j ] + vnum, ( b.x % 1 ) * width, ( 1 - b.y ) * height );
+				//ctx.fillText( abc[ j ] + vnum, ( b.x % 1 ) * width, ( 1 - b.y ) * height );
 
 			}
 
